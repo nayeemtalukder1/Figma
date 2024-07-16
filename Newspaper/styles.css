@@ -1,0 +1,163 @@
+body {
+  margin: 10px 10px;
+}
+
+.newspaper_container {
+  background-color: white;
+  margin: 28px 27px;
+}
+
+.head_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.left_header_part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bi-list {
+  margin-right: 10px;
+}
+
+.right_header_part button {
+  border: none;
+  padding: 3px 10px;
+}
+
+.right_header_part input {
+  border: none;
+  width: 60px;
+}
+
+.head_section p {
+  color: #b8adad;
+}
+
+.header_text {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.navbar {
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 340px;
+  margin-left: 263px;
+}
+
+.navbar ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/*----------hero----------------*/
+
+.hero_section {
+  margin: 0 27px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.img_1 {
+  height: 391px;
+  width: 519px;
+}
+
+.hero_middle {
+  margin-left: 20px;
+  min-width: 495px;
+}
+
+.hero_middle .middle_text {
+  background-color: yellow;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 120px;
+}
+
+.text_box {
+  height: 26px;
+  margin-top: 17px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.text_box a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.hero_middle .middle_text span {
+  background-color: yellow;
+}
+
+.hero_right {
+  margin-left: 20px;
+  background-color: #f0f0f0;
+}
+
+.hero_right .right_text {
+  background-color: yellow;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 120px;
+}
+
+.hero_right h3 {
+  padding-left: 27px;
+}
+
+.hero_right p {
+  padding-left: 27px;
+  border-bottom: 1px solid #ddd;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.hero_right button {
+  border: none;
+  background-color: transparent;
+  color: blue;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px){
+  .navbar ul {
+    display: none;
+  }
+
+  .hero_section {
+    margin: 0 27px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+}
