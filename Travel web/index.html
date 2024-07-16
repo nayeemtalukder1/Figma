@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <body>
+    <!------------------------Header----------------------------->
+    <section class="header">
+      <div class="navbar">
+        <div class="nav_icon">
+          <img src="/img/Logo.png" />
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Description</a></li>
+            <li><a href="">Tour</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav_reg">
+          <div class="nav_login"><button>Login</button></div>
+          <div class="nav_signup"><button>Sign up</button></div>
+        </div>
+        <button
+          type="button"
+          data-drawer-target="drawer-navigation"
+          data-drawer-show="drawer-navigation"
+          aria-controls="drawer-navigation"
+        >
+          <i class="bi bi-menu-button"></i>
+        </button>
+        <div
+          id="drawer-navigation"
+          class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
+          tabindex="-1"
+          aria-labelledby="drawer-navigation-label"
+        >
+          <h5
+            id="drawer-navigation-label"
+            class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+          >
+            Menu
+          </h5>
+          <button
+            type="button"
+            data-drawer-hide="drawer-navigation"
+            aria-controls="drawer-navigation"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Close menu</span>
+          </button>
+          <div class="py-4 overflow-y-auto">
+            <ul class="space-y-2 font-medium">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                    <path
+                      d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
+                    />
+                    <path
+                      d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
+                    />
+                  </svg>
+                  <span class="ms-3">Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                    <path
+                      d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                    />
+                  </svg>
+                  <span class="flex-1 ms-3 whitespace-nowrap">About</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                    <path
+                      d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                    />
+                  </svg>
+                  <span class="flex-1 ms-3 whitespace-nowrap">Description</span>
+                  
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                    <path
+                      d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                    />
+                  </svg>
+                  <span class="flex-1 ms-3 whitespace-nowrap">Tour</span>
+                  
+                </a>
+              </li>
+
+             
+              
+             
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------HeroSection-------------------------->
+
+    <section class="hero_container">
+      <div class="row-1">
+        <div class="hero_left">
+          <div class="hero_text1">
+            Get started Your Exciting <span>journey</span> with us.
+          </div>
+          <div class="hero_text2">
+            A Tearm of experienced tourism professionals will provide you the
+            best advice and tips for your desire place
+          </div>
+          <div class="hero_button"><button>Discover Now</button></div>
+        </div>
+        <div class="hero_right"><img src="/img/Image_travel.png" /></div>
+      </div>
+
+      <div class="row-2">
+        <div class="hero_bottom">
+          <div class="container">
+            <table style="width: 100%">
+              <tr>
+                <th>
+                  <div class="element1">
+                    <select>
+                      <option>Location</option>
+                      <option>Mymensingh</option>
+                      <option>Dhaka</option>
+                      <option>Rugpur</option>
+                    </select>
+                  </div>
+                </th>
+                <th>
+                  <div class="element1">
+                    <select>
+                      <option>Date</option>
+                      <option>6 AM</option>
+                      <option>8 PM</option>
+                      <option>12 PM</option>
+                    </select>
+                  </div>
+                </th>
+                <th>
+                  <div class="element1">
+                    <select>
+                      <option>Guest</option>
+                      <option>Account</option>
+                      <option>Facebook</option>
+                      <option>Instragram</option>
+                    </select>
+                  </div>
+                </th>
+              </tr>
+
+              <tr>
+                <td>Where are you going</td>
+                <td>When you will go</td>
+                <td>Number of guest</td>
+              </tr>
+            </table>
+
+            <button>Explore More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------Information------------------------>
+
+    <section class="information">
+      <div class="text">
+        <div class="text1">Things you need <span>to do</span></div>
+        <div class="text2">
+          We ensure that you’ll embark on a perfectly planned,<br />
+          safe vacation at a price you can afford.
+        </div>
+      </div>
+      <div class="img_container">
+        <div class="img_1"><img src="/img/Sign Up.svg" /></div>
+        <div class="img_2"><img src="/img/Money.svg" /></div>
+        <div class="img_3"><img src="/img/Travel.svg" /></div>
+      </div>
+    </section>
+
+    <!---------------------Container---------------------------->
+
+    <section class="container1">
+      <div class="text">
+        <div class="text1">Exclusive <span>deals & discounts</span></div>
+        <div class="text2">
+          Discover our fantastic early booking discount<br />
+          & start planning your journey.
+        </div>
+      </div>
+      <div class="cards_3 swiper swiper-container1">
+        <div class="swiper-wrapper">
+          <div class="card_3 swiper-slide">
+            <img src="/img/Image.png" />
+            <div class="first_row">
+              <div class="company_name">Madrid</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+            <div class="second_row">
+              <div class="country"><i class="bi bi-geo-alt-fill"></i>Spain</div>
+              <div class="price">
+                <div class="main_price">$950</div>
+                <div class="current_price">$850</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_3 swiper-slide">
+            <img src="/img/Image (1).png" />
+            <div class="first_row">
+              <div class="company_name">Firenze</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+            <div class="second_row">
+              <div class="country"><i class="bi bi-geo-alt-fill"></i>Italy</div>
+              <div class="price">
+                <div class="main_price">$850</div>
+                <div class="current_price">$750</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_3 swiper-slide">
+            <img src="/img/Image (2).png" />
+            <div class="first_row">
+              <div class="company_name">Paris</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.4
+              </div>
+            </div>
+            <div class="second_row">
+              <div class="country">
+                <i class="bi bi-geo-alt-fill"></i>France
+              </div>
+              <div class="price">
+                <div class="main_price">$699</div>
+                <div class="current_price">$599</div>
+              </div>
+            </div>
+          </div>
+          <div class="card_3 swiper-slide">
+            <img src="/img/Image (3).png" />
+            <div class="first_row">
+              <div class="company_name">London</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+            <div class="second_row">
+              <div class="country"><i class="bi bi-geo-alt-fill"></i>UK</div>
+              <div class="price">
+                <div class="main_price">$850</div>
+                <div class="current_price">$850</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button_container">
+        <div class="nav-buttons">
+          <button
+            class="nav-button left-button1"
+            onclick="setActiveButton(this, 'swiper-container1')"
+          >
+            <span class="arrow left-arrow"></span>
+          </button>
+          <button
+            class="nav-button right-button1 active"
+            onclick="setActiveButton(this, 'swiper-container1')"
+          >
+            <span class="arrow right-arrow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!------------------container-------------------2-->
+    <section class="container2">
+      <div class="text">
+        <div class="text1">Get update with <span>latest blog </span></div>
+      </div>
+      <div class="cards_3 swiper swiper-container2">
+        <div class="swiper-wrapper">
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (3).png" />
+            <div class="first_row">
+              <div class="company_name">Rome, Italy</div>
+              <div class="price_4">$5,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">10 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+          </div>
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (4).png" />
+            <div class="first_row">
+              <div class="company_name">London, UK</div>
+              <div class="price_4">$2,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">07 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.87
+              </div>
+            </div>
+          </div>
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (5).png" />
+            <div class="first_row">
+              <div class="company_name">Osaka, Japan</div>
+              <div class="price_4">$5,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">10 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination2"></div>
+      <div class="button_container">
+        <div class="nav-buttons">
+          <button
+            class="nav-button left-button2"
+            onclick="setActiveButton(this, 'swiper-container2')"
+          >
+            <span class="arrow left-arrow"></span>
+          </button>
+          <button
+            class="nav-button right-button2 active"
+            onclick="setActiveButton(this, 'swiper-container2')"
+          >
+            <span class="arrow right-arrow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------comment----------------------->
+
+    <section class="comment">
+      <div class="left5">
+        <div class="text5_1">
+          What people say <br />
+          <span>about us.</span>
+        </div>
+        <div class="text5_2">
+          Our Clients send us bunch of smilies with our services and we love
+          them.
+        </div>
+      </div>
+      <div class="right5">
+        <img src="/img/hero5.png" class="image5_1" />
+        <img src="/img/hero5.1.png" class="image5_2" />
+      </div>
+    </section>
+
+    <!------------------container------------------3-->
+
+    <section class="container2">
+      <div class="text">
+        <div class="text1">Get update with <span>latest blog </span></div>
+      </div>
+      <div class="cards_3 swiper swiper-container3">
+        <div class="swiper-wrapper">
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (3).png" />
+            <div class="first_row">
+              <div class="company_name">Rome, Italy</div>
+              <div class="price_4">$5,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">10 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+          </div>
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (4).png" />
+            <div class="first_row">
+              <div class="company_name">London, UK</div>
+              <div class="price_4">$2,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">07 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.87
+              </div>
+            </div>
+          </div>
+          <div class="card_4 swiper-slide">
+            <img src="/img/Image (5).png" />
+            <div class="first_row">
+              <div class="company_name">Osaka, Japan</div>
+              <div class="price_4">$5,42k</div>
+            </div>
+            <div class="second_row">
+              <div class="country">10 Days Trip</div>
+              <div class="rating">
+                <i class="bi bi-star-fill colour"></i>4.8
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination3"></div>
+      <div class="button_container">
+        <div class="nav-buttons">
+          <button
+            class="nav-button left-button3"
+            onclick="setActiveButton(this, 'swiper-container3')"
+          >
+            <span class="arrow left-arrow"></span>
+          </button>
+          <button
+            class="nav-button right-button3 active"
+            onclick="setActiveButton(this, 'swiper-container3')"
+          >
+            <span class="arrow right-arrow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------footer----------------------->
+
+    <section class="footer">
+      <div class="container7">
+        <div class="footer_left">
+          <div class="logo"><img src="/img/Logo.png" /></div>
+          <div class="footer_text1">
+            Book your trip in minute,get full<br />
+            Control for much longer.
+          </div>
+          <div class="footer_social">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter-x"></i>
+          </div>
+        </div>
+        <div class="footer_right">
+          <div class="footer_con1">
+            <h2>Company</h2>
+            <p>About</p>
+            <p>Careers</p>
+            <p>Logistic</p>
+            <p>Privacy & Policy</p>
+          </div>
+          <div class="footer_con2">
+            <h2>Contact</h2>
+            <p>Help/FAQ</p>
+            <p>Press</p>
+            <p>Affilates</p>
+            <p>Privacy & Policy</p>
+          </div>
+          <div class="footer_con3">
+            <h2>More</h2>
+            <p>Press Centre</p>
+            <p>Out Blog</p>
+            <p>Law fare tips</p>
+            <p>Privacy & Policy</p>
+          </div>
+        </div>
+      </div>
+      <div class="container8">
+        <div class="con_left">
+          copyright, Trabook 2022. All rights reserved.
+        </div>
+        <div class="con_right">Terms & Conditions</div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
+    <script>
+      function setActiveButton(button) {
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll(".nav-button");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // Add active class to the clicked button
+        button.classList.add("active");
+      }
+    </script>
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+      const swiper1 = new Swiper(".swiper-container1", {
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: {
+          nextEl: ".left-button1",
+          prevEl: ".right-button1",
+        },
+        pagination: {
+          el: ".swiper-pagination1",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      const swiper2 = new Swiper(".swiper-container2", {
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: {
+          nextEl: ".left-button2",
+          prevEl: ".right-button2",
+        },
+        pagination: {
+          el: ".swiper-pagination2",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+
+      const swiper3 = new Swiper(".swiper-container3", {
+        autoplay: {
+          delay: 2000,
+        },
+        navigation: {
+          nextEl: ".left-button3",
+          prevEl: ".right-button3",
+        },
+        pagination: {
+          el: ".swiper-pagination3",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
